@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comentarios</title>
+  <link rel="stylesheet" href="{% static 'comentario.css' %}">
+</head>
+<body>
+  <div id="poste">
+          <div class="poste-padding">
+            <div clas="poste-content">
+              <div class="img-poste-obra"><img class="img-poste" src=""></div>
+              <div class="desc-poste">
+                  <h1>Nome da Obra</h1>
+                  <h2> estão entre as justificativas da prefeitura.</h2>
+
+              </div>
+              <div class="coment-poste">
+                <div class="title-coment"><p>MAIS RECENTES</p></div>
+                <div class="conteiner-coment">
+                  <div class="topico"></div>
+                  <div class="comentarios">
+                      <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
+                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
+                  </div>
+                  <div class="comentarios">
+                      <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
+                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
+                  </div>
+                  <div class="comentarios">
+                      <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
+                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
+                  </div>
+
+                  <div class="comentarios">
+                    <div class="title-coment"><p>Deixe seu comentario</p></div>
+                    <form class="" action="" method="POST">
+                      <div><input class="campo-email" type="text" placeholder="Digite Seu E-mail" name="email"></div>
+                      <div><input class="campo-comentario" type="text" placeholder="Digite Seu comentario" name="comentario"></div>
+                      <div><input class="enviar" type="button"value="Enviar" name="enviar" </div>
+                    </form>
+                 </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
