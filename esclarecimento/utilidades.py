@@ -1,4 +1,4 @@
-from .models import Esclarecimento,Foto
+from .models import Esclarecimento,Foto,Foto_Esclarecimento
 from django.contrib.auth.models import User
 
 def get_reclamacao_post(request,id=None):
@@ -16,7 +16,7 @@ def get_reclamacao_post(request,id=None):
     gps_long = request.POST.get('gps_long')
 
     email = email.lower()
-    nickname=email.split("@")[0]
+    nickname=email.split("@")[0]+email.split("@")[1]
 
     autor,criado = User.objects.get_or_create(email=email,username=nickname)
 
@@ -66,7 +66,7 @@ def get_chat(request,esclarecimento):
     else:
         email = request.POST.get('email')
         email = email.lower()
-        nickname=email.split("@")[0]
+        nickname=email.split("@")[0]+email.split("@")[1]
         autor,criado = User.objects.get_or_create(email=email,username=nickname)
         chat.autor=autor
 
