@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Esclarecimento(models.Model):
     titulo = models.CharField(max_length=255)
     descricao = models.TextField(null=True)
-    gps_lat = models.DecimalField(max_digits=9,decimal_places=6)
-    gps_long = models.DecimalField(max_digits=9,decimal_places=6)
+    gps_lat = models.DecimalField(max_digits=9,decimal_places=6,null=True)
+    gps_long = models.DecimalField(max_digits=9,decimal_places=6,null=True)
     data_criado = models.DateTimeField(auto_now_add=True)
     obra = models.ForeignKey(Obra,on_delete=models.PROTECT,null=True)
     autor = models.ForeignKey(User,on_delete=models.PROTECT)

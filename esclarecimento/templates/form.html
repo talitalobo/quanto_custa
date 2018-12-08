@@ -30,6 +30,7 @@
   <main id="form">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <form action="{% url 'esclarecimento:index' %} " method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
         <div class="container">
             <label for="titulo"><b>Titulo</b></label>
             <input type="text" name="titulo" value="{{esclarecimento.titulo}}" required>
