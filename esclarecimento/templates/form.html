@@ -28,6 +28,7 @@
   </header>
 
   <main id="form">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <form action="{% url 'esclarecimento:index' %} " method="POST" enctype="multipart/form-data">
         <div class="container">
             <label for="titulo"><b>Titulo</b></label>
@@ -51,5 +52,7 @@
         </div>
     </form>
   </main>
+
+  <script src="{% static 'main.js' %}"></script>
 </body>
 </html>
