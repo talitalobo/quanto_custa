@@ -1,0 +1,10 @@
+media/banner/*
+media/fotos/*
+media/fundo/*
+!.gitkeep
+!media/fundo/.gitkeep
+!media/fotos/.gitkeep
+!media/banner/.gitkeep
+*.pyc
+db.sqlite3
+__pycache__/

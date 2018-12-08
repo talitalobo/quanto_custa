@@ -2,7 +2,7 @@ from .models import Obra,Empresa
 from quanto_custa.utilidades import remover_acento
 
 def get_empresa_post(request):
-    razao_social = request.POST.get('razao_social')]
+    razao_social = request.POST.get('razao_social')
     #ia usar para pesquisar pela razao social mas pode dar muito erro
     razao_social_sem_acento = remover_acento(razao_social)
     cnpj= request.POST.get('cnpj')
