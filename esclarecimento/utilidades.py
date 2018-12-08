@@ -1,12 +1,6 @@
 from .models import Esclarecimento,Foto
 from django.contrib.auth.models import User
 
-def get_obra_post(request,id=None):
-    if id==None:
-        obra = Obra()
-    else:
-        obra = Obra.objects.get(id=id)
-
 def get_reclamacao_post(request,id=None):
     mensagem_erro=None
     if id==None:
@@ -81,5 +75,3 @@ def get_chat(request,esclarecimento):
     chat.save()
 
     return chat,mensagem_erro
-
-    
