@@ -7,7 +7,7 @@ from .utilidades import get_reclamacao_post,get_chat
 from obras.utilidades import get_obra_post
 # Create your views here.
 def index(request):
-    template = loader.get_template("template_listando_tudo.html")
+    template = loader.get_template("form.html")
     context={}
 
     if request.method=="GET":
@@ -27,6 +27,7 @@ def index(request):
         return HttpResponse(template.render(context,request))
 
 def adicionar_mensagem(request,id):
+
     pass
 
 def adicionar_chat(request,id):
