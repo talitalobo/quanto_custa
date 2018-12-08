@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Esclarece Aqui</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <h1 class="menu-branding">
+        esclarece aqui
+      </h1>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="form">
+    <form action="" enctype="multipart/form-data">
+        <div class="container">
+            <label for="titulo"><b>Titulo</b></label>
+            <input type="text" name="titulo" required>
+
+            <label for="descricao"><b>Descrição</b></label>
+            <textarea name="descricao" cols="40" rows="5" required></textarea>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email" required>
+
+            <div class="img">
+                <label for="file-upload1" class="custom-file-upload">Foto da placa</label>
+                <input id="file-upload1" name='upload_cont_img' type="file">
+
+                <label for="file-upload2" class="custom-file-upload">Foto da obra</label>
+                <input id="file-upload2" name='upload_cont_img' type="file">
+            </div>
+
+            <button type="submit" class="enviar">Enviar requisição</button>
+        </div>
+    </form>
+  </main>
+</body>
+</html>
