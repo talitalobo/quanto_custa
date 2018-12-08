@@ -1,0 +1,183 @@
+header {
+  width: 100%;
+  left: 0;
+  top: 0; }
+  header .menu {
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1vh;
+    padding-bottom: 40px; }
+    header .menu-branding, header .menu-nav {
+      display: flex;
+      width: 50%; }
+    header .menu-branding {
+      float: left;
+      font-weight: 300;
+      margin: 0;
+      padding-left: 5rem;
+      font-weight: 400;
+      text-transform: uppercase; }
+      header .menu-branding a {
+        color: #000;
+        text-decoration: none; }
+      header .menu-branding .branding-detail {
+        color: #0088aa; }
+    header .menu-nav {
+      margin: 0;
+      float: right;
+      padding: 0;
+      justify-content: flex-end;
+      padding-right: 5rem; }
+      header .menu-nav .nav-item {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        text-transform: capitalize;
+        font-weight: 300;
+        color: #302830; }
+        header .menu-nav .nav-item.current {
+          font-weight: 800; }
+        header .menu-nav .nav-item .nav-link {
+          font-weight: 400;
+          color: #000;
+          text-decoration: none; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #fff; }
+
+main#home {
+  padding: 0 60px; }
+  main#home .bar {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); }
+    main#home .bar .esquerda .aberta,
+    main#home .bar .esquerda .fechada,
+    main#home .bar .esquerda .andamento {
+      background-color: #63888c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      opacity: 0.9; }
+    main#home .bar .direita {
+      margin-left: auto; }
+      main#home .bar .direita .grid,
+      main#home .bar .direita .lista {
+        background-color: #63888c;
+        color: white;
+        padding: 10px;
+        border: 0px; }
+  main#home .card-block {
+    padding-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 4fr);
+    border: 0; }
+    main#home .card-block .card {
+      background-color: #bbb;
+      padding-top: 75%;
+      text-align: center; }
+      main#home .card-block .card h4 {
+        text-transform: uppercase;
+        padding-bottom: 0.4rem;
+        padding-top: 0.4rem;
+        margin: 0;
+        font-weight: normal;
+        text-align: center;
+        background: #ccc; }
+    main#home .card-block .card:hover {
+      -webkit-box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75); }
+
+main#form {
+  background: #fff; }
+  main#form .container {
+    padding: 16px; }
+  main#form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1; }
+  main#form textarea,
+  main#form input[type=text],
+  main#form input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1; }
+  main#form input[type=text]:focus {
+    background-color: #ddd;
+    outline: none; }
+  main#form .img {
+    margin-top: 10px; }
+    main#form .img input[type=file] {
+      display: none; }
+    main#form .img label {
+      background-color: #63888c;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 4px 8px 0;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+      display: inline; }
+    main#form .img label:hover {
+      opacity: 1; }
+  main#form .enviar {
+    background-color: #63888c;
+    color: white;
+    padding: 16px 20px;
+    margin: 26px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9; }
+  main#form .enviar:hover {
+    opacity: 1; }
+
+@media only screen and (min-width: 769px) and (max-width: 1170px) {
+  main#home .card-block {
+    grid-template-columns: repeat(3, 3fr); } }
+
+@media only screen and (max-width: 768px) {
+  main#home .card-block {
+    grid-template-columns: repeat(2, 2fr); }
+  main#home .bar {
+    display: block;
+    grid-template-columns: 1fr; }
+    main#home .bar .esquerda .aberta,
+    main#home .bar .esquerda .fechada,
+    main#home .bar .esquerda .andamento {
+      margin-bottom: 4px;
+      width: 100%; }
+  main#form .img label {
+    display: block;
+    text-align: center; }
+  main#form .enviar {
+    margin: 14px 0; }
+  header .menu-branding, header .menu-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0; } }
+
+@media only screen and (max-width: 500px) {
+  main#home .card-block {
+    grid-template-columns: 1fr; }
+  header .menu-branding, header .menu-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0; } }
