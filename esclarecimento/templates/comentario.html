@@ -12,35 +12,36 @@
   <div id="poste">
           <div class="poste-padding">
             <div clas="poste-content">
-              <div class="img-poste-obra"><img class="img-poste" src=""></div>
+              <div class="img-poste-obra"><img class="img-poste" src="{{esclarecimento.get_foto_principal.foto.url}}"></div>
               <div class="desc-poste">
-                  <h1>Nome da Obra</h1>
-                  <h2> estão entre as justificativas da prefeitura.</h2>
+                  <h1>{{esclarecimento.titulo}}</h1>
+                  <h2> {{esclarecimento.descricao}}</h2>
 
               </div>
               <div class="coment-poste">
                 <div class="title-coment"><p>MAIS RECENTES</p></div>
                 <div class="conteiner-coment">
                   <div class="topico"></div>
+                  {% for chat in chats %}
                   <div class="comentarios">
                       <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
-                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
+                      <div class="texto-coment"><p>{{chat.mensagem}}</p></div>
                   </div>
-                  <div class="comentarios">
-                      <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
-                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
-                  </div>
-                  <div class="comentarios">
-                      <div class="img-coment-perfil"><img class="img-perfil" src="{% static 'perfil.jpg' %}" /></div>
-                      <div class="texto-coment"><p>já custaram quase R$ 2,3 milhões em São Carlos, SP</p></div>
-                  </div>
+                  {% endfor %}
 
                   <div class="comentarios">
                     <div class="title-coment"><p>Deixe seu comentario</p></div>
-                    <form class="" action="" method="POST">
+                    <form class="" action="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" method="POST">
+                      {% csrf_token %}
+                      {% if not request.user.is_authenticated %}
                       <div><input class="campo-email" type="text" placeholder="Digite Seu E-mail" name="email"></div>
-                      <div><input class="campo-comentario" type="text" placeholder="Digite Seu comentario" name="comentario"></div>
-                      <div><input class="enviar" type="button"value="Enviar" name="enviar" </div>
+                      {% endif %}
+                      <div><input class="campo-comentario" type="text" placeholder="Digite Seu comentario" name="mensagem"></div>
+
+                      <div>
+                        <button class="enviar" type="submit" value="Enviar" name="enviar">Enviao Ja1</button>
+                        
+                      </div>
                     </form>
                  </div>
 

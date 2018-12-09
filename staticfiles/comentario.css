@@ -1,0 +1,24 @@
+body{margin: 0 auto;color:#101010;font-family: Arial, sans-serif;}
+#poste{
+  width:100%;
+  height:100%;
+  margin: 0 auto;
+
+}
+.poste-padding{}
+.poste-content{}
+.img-poste-obra{background-color: #eee; box-shadow:0px 8px 17px 1px rgba(0,0,0,0.2); }
+.img-poste{width:100%;height:200px; background-color: #eee;}
+.desc-poste{padding: 10px;}
+.coment-poste{float:left; width: 90%;margin-left:5%;height: 100%;text-align: center; border-radius: 10px; box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);}
+
+  .title-coment{height: 50px;background-color: #eee;padding-top:1px; }
+  .comentarios{width: 100%;float: left;margin-top: 5px;}
+    .img-coment-perfil{float:left;width: 20%;}
+    .img-perfil{width: 50px; height: 50px; border-radius: 50%;}
+    .texto-coment{float:right; width: 80%;}
+    .ico-compartilhar{width: 100%}
+    .barra-inferior{float:left;width: 90%;height:1px;background-color: #ccc;margin-left:5%;}
+  .campo-email{width: 90%}
+  .campo-comentario{width: 90%;height: 100px;}
+  .enviar{width: 150px;height: 70px}

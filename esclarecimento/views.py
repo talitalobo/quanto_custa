@@ -23,7 +23,7 @@ def index(request):
         chats = Chat.objects.filter(esclarecimento_id=esclarecimento.id).order_by('-id')
         context.update(chats=chats)
 
-        template = loader.get_template("template_chat+obra.html")
+        template = loader.get_template("comentario.html")
         return HttpResponse(template.render(context,request))
 
 def adicionar_mensagem(request,id):
@@ -31,7 +31,7 @@ def adicionar_mensagem(request,id):
     pass
 
 def adicionar_chat(request,id):
-    template = loader.get_template("template_chat+obra.html")
+    template = loader.get_template("comentario.html")
     context={}
 
     esclarecimento=Esclarecimento.objects.get(id=id)
