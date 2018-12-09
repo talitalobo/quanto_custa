@@ -26,6 +26,26 @@ def index(request):
         template = loader.get_template("comentario.html")
         return HttpResponse(template.render(context,request))
 
+def add_escla(request):
+    template = loader.get_template("form.html")
+    context={}
+
+    if request.method=="GET":
+
+        esclarecimentos = Esclarecimento.objects.all()
+        context.update(esclarecimentos=esclarecimentos)
+
+        return HttpResponse(template.render(context,request))
+    else:
+        esclarecimento,mensagem_erro=get_reclamacao_post(request=request)
+        context.update(esclarecimento=esclarecimento)
+
+        chats = Chat.objects.filter(esclarecimento_id=esclarecimento.id).order_by('-id')
+        context.update(chats=chats)
+
+        template = loader.get_template("comentario.html")
+        return HttpResponse(template.render(context,request))
+
 def adicionar_mensagem(request,id):
 
     pass

@@ -30,6 +30,18 @@ class Esclarecimento(models.Model):
             dado = None
             return False
 
+    def status_css(self):
+
+        if self.status==None:
+            return "card abrt"
+        if self.status == self.ABERTO:
+            return "card abrt"
+        if self.status == self.PROCESSANDO:
+            return "card andt"
+        if self.status == self.FINALIZADO:
+            return "card fchd"
+
+
 class Chat(models.Model):
     esclarecimento = models.ForeignKey(Esclarecimento,on_delete=models.PROTECT)
     mensagem=models.TextField(null=True)
