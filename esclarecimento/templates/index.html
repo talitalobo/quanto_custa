@@ -41,11 +41,18 @@
       </div>
     </div>
     <div class="adiciona">
-      <button id="add">Solicitar esclarecimento</button>
+      {# <a id="add" href="#">Testes</a> #}
+      <a href="{% url 'esclarecimento:add_escla' %}">
+        <button id="add">Solicitar esclarecimento</button>
+      </a>
     </div>
-
     <div id="card-block" class="show-grid">
+<<<<<<< HEAD
       <div class="card-img abrt" style="background-image: url(../img/outdoor1.jpeg);">
+=======
+    {% if False %}
+      <div class="card-img" style="background-image: url({% static "outdoor1.jpeg" %});">
+>>>>>>> 9711261811fcfcc6b717a4641d369c52b331e567
         <a href="#" class="card-url">
           <div class="card">
             <h2>Titulo</h2>
@@ -54,7 +61,11 @@
         </a>
       </div>
 
+<<<<<<< HEAD
       <div class="card-img fchd" style="background-image: url(../img/outdoor2.jpeg);">
+=======
+      <div class="card-img" style="background-image: url({% static "outdoor2.jpeg" %});">
+>>>>>>> 9711261811fcfcc6b717a4641d369c52b331e567
         <a href="#" class="card-url">
           <div class="card">
             <h2>Titulo</h2>
@@ -63,7 +74,11 @@
         </a>
       </div>
 
+<<<<<<< HEAD
       <div class="card-img andt" style="background-image: url(../img/outdoor3.jpg);">
+=======
+      <div class="card-img" style="background-image: url({% static "outdoor3.jpg" %});">
+>>>>>>> 9711261811fcfcc6b717a4641d369c52b331e567
         <a href="#" class="card-url">
           <div class="card">
             <h2>Titulo</h2>
@@ -71,9 +86,34 @@
           </div>
         </a>
       </div>
-
+      {% else %}
       {% for esclarecimento in esclarecimentos  %}
+<<<<<<< HEAD
       <div class="card-img andt" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+=======
+      {% if esclarecimento.id == 6 %}
+      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+        <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
+          <div class="card abrt">
+            <h2>{{esclarecimento.titulo}}</h2>
+            <h4 class="hidden">{{esclarecimento.descricao}}</h4>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if esclarecimento.id == 7 %}
+      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+        <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
+          <div class="card fchd">
+            <h2>{{esclarecimento.titulo}}</h2>
+            <h4 class="hidden">{{esclarecimento.descricao}}</h4>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if esclarecimento.id == 8 %}
+      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+>>>>>>> 9711261811fcfcc6b717a4641d369c52b331e567
         <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
           <div class="card">
             <h2>{{esclarecimento.titulo}}</h2>
@@ -81,7 +121,19 @@
           </div>
         </a>
       </div>
+      {% endif %}
+      {% if esclarecimento.id > 8 %}
+      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+        <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
+          <div class="{{esclarecimento.status_css}}">
+            <h2>{{esclarecimento.titulo}}</h2>
+            <h4 class="hidden">{{esclarecimento.descricao}}</h4>
+          </div>
+        </a>
+      </div>
+      {% endif %}
       {% endfor %}
+      {% endif %}
     </div>
   </main>
 
