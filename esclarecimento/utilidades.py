@@ -69,7 +69,7 @@ def get_chat(request,esclarecimento):
         nickname=email.split("@")[0]+email.split("@")[1]
         autor,criado = User.objects.get_or_create(email=email,username=nickname)
         chat.autor=autor
-    raise()
+    # raise()
     chat.esclarecimento=esclarecimento
     chat.mensagem=mensagem
     chat.save()

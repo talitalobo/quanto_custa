@@ -22,9 +22,13 @@ class Esclarecimento(models.Model):
     status = models.IntegerField(choices=status_choices,null=True)
 
     def get_foto_principal(self):
-        dado = self.foto_esclarecimento_set.filter(principal=True).first().foto
-        # print(dado.foto.url)
-        return dado
+        dado = self.foto_esclarecimento_set.filter(principal=True).first()
+        if dado is not None:
+            dado = dado.foto
+            return dado
+        else:
+            dado = None
+            return False
 
 class Chat(models.Model):
     esclarecimento = models.ForeignKey(Esclarecimento,on_delete=models.PROTECT)

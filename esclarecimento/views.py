@@ -7,7 +7,7 @@ from .utilidades import get_reclamacao_post,get_chat
 from obras.utilidades import get_obra_post
 # Create your views here.
 def index(request):
-    template = loader.get_template("form.html")
+    template = loader.get_template("index.html")
     context={}
 
     if request.method=="GET":

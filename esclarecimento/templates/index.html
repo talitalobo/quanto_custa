@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Esclarece Aqui</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{% static "main.css" %}">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
@@ -71,18 +72,20 @@
         </a>
       </div>
 
-      <div class="card-img" style="background-image: url(../img/outdoor4.jpeg);">
-        <a href="#" class="card-url">
+      {% for esclarecimento in esclarecimentos  %}
+      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+        <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
           <div class="card andt">
-            <h2>Titulo</h2>
-            <h4 class="hidden">Endereco</h4>
+            <h2>{{esclarecimento.titulo}}</h2>
+            <h4 class="hidden">{{esclarecimento.descricao}}</h4>
           </div>
         </a>
       </div>
+      {% endfor %}
     </div>
   </main>
 
-  <script src="js/button.js"></script>
+  <script src="{% static "button.js" %}"></script>
 </body>
 
 </html>
