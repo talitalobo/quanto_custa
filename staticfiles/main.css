@@ -170,54 +170,6 @@ main#form {
   main#form .enviar:hover {
     opacity: 1; }
 
-main#chat .poste {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto; }
-  main#chat .poste .poste-padding .poste-content .img-poste-obra {
-    background-color: #eee;
-    box-shadow: 0px 8px 17px 1px rgba(0, 0, 0, 0.2); }
-    main#chat .poste .poste-padding .poste-content .img-poste-obra .img-poste {
-      width: 100%;
-      height: 200px;
-      background-color: #eee; }
-  main#chat .poste .poste-padding .poste-content .desc-poste {
-    padding: 10px; }
-  main#chat .poste .poste-padding .poste-content .coment-poste {
-    float: left;
-    width: 90%;
-    margin-left: 5%;
-    height: 100%;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
-    main#chat .poste .poste-padding .poste-content .coment-poste .title-coment {
-      height: 50px;
-      background-color: #eee;
-      padding-top: 1px; }
-    main#chat .poste .poste-padding .poste-content .coment-poste .comentarios {
-      width: 100%;
-      float: left;
-      margin-top: 5px; }
-      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .img-coment-perfil {
-        float: left;
-        width: 20%; }
-        main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .img-coment-perfil .img-perfil {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%; }
-      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .texto-coment {
-        float: right;
-        width: 80%; }
-      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .campo-email {
-        width: 90%; }
-      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .campo-comentario {
-        width: 90%;
-        height: 100px; }
-      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .enviar {
-        width: 150px;
-        height: 70px; }
-
 @media only screen and (min-width: 769px) and (max-width: 1170px) {
   main#home #card-block.show-grid {
     grid-template-columns: repeat(3, 3fr); } }
@@ -252,8 +204,10 @@ main#chat .poste {
     padding: 0; } }
 
 @media only screen and (max-width: 500px) {
-  main#home #card-block.show-grid {
-    grid-template-columns: repeat(2, 2fr); }
+  main#home {
+    padding: 0 16px; }
+    main#home #card-block.show-grid {
+      grid-template-columns: repeat(2, 2fr); }
   header .menu-branding, header .menu-nav {
     display: flex;
     width: 100%;

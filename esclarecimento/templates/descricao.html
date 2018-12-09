@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Esclarece Aqui</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <h1 class="menu-branding">
+        <a href="index.html">esclarece aqui</a>
+      </h1>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="form">
+    <form action="" enctype="multipart/form-data">
+        <div class="container">
+            <h2>INFORMAÇÕES DA OBRA</h2>
+
+            <label for="descricao"><b>Descrição</b></label>
+            <textarea name="descricao" cols="40" rows="5" required></textarea>
+
+            <label for="dtinic"><b>Data inicial</b></label>
+            <input type="text" name="dtinic">
+
+            <label for="dtfinal"><b>Data final</b></label>
+            <input type="text" name="dtfinal">
+
+            <label for="valor"><b>Valor orçado</b></label>
+            <input type="text" name="valor">
+
+            <label for="mais-info"><b>Mais informações da obra</b></label>
+            <textarea name="mais-info" cols="40" rows="5" required></textarea>
+
+            <hr>
+            
+            <h2>INFORMAÇÕES DA EMPRESA</h2>
+
+            <label for="rz-social"><b>Razão social</b></label>
+            <input type="text" name="rz-social">
+
+            <label for="cnpj"><b>CNPJ</b></label>
+            <input type="text" name="cnpj">
+
+            <label for="mais-emp"><b>Adicionais da empresa</b></label>
+            <textarea name="mais-emp" cols="40" rows="5" required></textarea>
+
+            <button type="submit" class="enviar">Enviar requisição</button>
+        </div>
+    </form>
+  </main>
+</body>
+</html>
