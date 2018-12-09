@@ -35,7 +35,7 @@ header {
         list-style: none;
         display: flex;
         flex-direction: row;
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-weight: 300;
         color: #302830; }
         header .menu-nav .nav-item.current {
@@ -55,7 +55,8 @@ main#home {
   padding: 0 60px; }
   main#home .bar {
     display: grid;
-    grid-template-columns: repeat(2, 2fr); }
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 20px; }
     main#home .bar .esquerda .aberta,
     main#home .bar .esquerda .fechada,
     main#home .bar .esquerda .andamento {
@@ -67,24 +68,42 @@ main#home {
       opacity: 0.9; }
     main#home .bar .direita {
       margin-left: auto; }
-      main#home .bar .direita .grid,
-      main#home .bar .direita .lista {
+      main#home .bar .direita button {
         background-color: #63888c;
         color: white;
         padding: 10px;
         border: 0px; }
-  main#home .card-block {
+  main#home .adiciona {
+    margin-top: 5px;
+    width: 100%; }
+    main#home .adiciona button {
+      background-color: #35ad53;
+      color: white;
+      padding: 10px;
+      border: 0px;
+      width: 100%; }
+  main#home #card-block .card-url {
+    text-decoration: none;
+    color: black; }
+  main#home #card-block .card.abrt {
+    border: 5px solid red; }
+  main#home #card-block .card.fchd {
+    border: 5px solid green; }
+  main#home #card-block .card.andt {
+    border: 5px solid yellow; }
+  main#home #card-block.show-grid {
     padding-top: 10px;
     width: 100%;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(4, 4fr);
     border: 0; }
-    main#home .card-block .card {
-      background-color: #bbb;
+    main#home #card-block.show-grid .card {
       padding-top: 75%;
       text-align: center; }
-      main#home .card-block .card h4 {
+      main#home #card-block.show-grid .card .hidden {
+        display: none; }
+      main#home #card-block.show-grid .card h2 {
         text-transform: uppercase;
         padding-bottom: 0.4rem;
         padding-top: 0.4rem;
@@ -92,10 +111,14 @@ main#home {
         font-weight: normal;
         text-align: center;
         background: #ccc; }
-    main#home .card-block .card:hover {
-      -webkit-box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 22px -7px rgba(0, 0, 0, 0.75); }
+  main#home #card-block.show-list {
+    display: block; }
+    main#home #card-block.show-list .card {
+      background-color: #bbb;
+      margin: 30px 0; }
+      main#home #card-block.show-list .card h2, main#home #card-block.show-list .card h4 {
+        padding: 9px;
+        margin: 0; }
 
 main#form {
   background: #fff; }
@@ -148,20 +171,27 @@ main#form {
     opacity: 1; }
 
 @media only screen and (min-width: 769px) and (max-width: 1170px) {
-  main#home .card-block {
+  main#home #card-block.show-grid {
     grid-template-columns: repeat(3, 3fr); } }
 
 @media only screen and (max-width: 768px) {
-  main#home .card-block {
+  main#home #card-block.show-grid {
     grid-template-columns: repeat(2, 2fr); }
   main#home .bar {
-    display: block;
-    grid-template-columns: 1fr; }
+    display: block; }
     main#home .bar .esquerda .aberta,
     main#home .bar .esquerda .fechada,
     main#home .bar .esquerda .andamento {
       margin-bottom: 4px;
       width: 100%; }
+    main#home .bar .direita {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      grid-gap: 0.4rem; }
+      main#home .bar .direita button {
+        margin: 0 auto;
+        display: inline-block;
+        width: 100%; }
   main#form .img label {
     display: block;
     text-align: center; }
@@ -174,8 +204,8 @@ main#form {
     padding: 0; } }
 
 @media only screen and (max-width: 500px) {
-  main#home .card-block {
-    grid-template-columns: 1fr; }
+  main#home #card-block.show-grid {
+    grid-template-columns: repeat(2, 2fr); }
   header .menu-branding, header .menu-nav {
     display: flex;
     width: 100%;
