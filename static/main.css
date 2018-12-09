@@ -82,48 +82,52 @@ main#home {
       padding: 10px;
       border: 0px;
       width: 100%; }
-  main#home #card-block .card-url {
-    text-decoration: none;
-    color: black; }
-  main#home #card-block .card.abrt {
-    border: 5px solid red; }
-  main#home #card-block .card.fchd {
-    border: 5px solid green; }
-  main#home #card-block .card.andt {
-    border: 5px solid yellow; }
-  main#home #card-block.show-grid {
-    padding-top: 10px;
-    width: 100%;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(4, 4fr);
-    border: 0; }
-    main#home #card-block.show-grid .card {
-      padding-top: 75%;
-      text-align: center; }
-      main#home #card-block.show-grid .card .hidden {
-        display: none; }
-      main#home #card-block.show-grid .card h2 {
-        text-transform: uppercase;
-        padding-bottom: 0.4rem;
-        padding-top: 0.4rem;
-        margin: 0;
-        font-weight: normal;
-        text-align: center;
-        background: #ccc; }
-  main#home #card-block.show-list {
-    display: block; }
-    main#home #card-block.show-list .card {
-      background-color: #bbb;
-      margin: 30px 0; }
-      main#home #card-block.show-list .card h2, main#home #card-block.show-list .card h4 {
-        padding: 9px;
-        margin: 0; }
+  main#home #card-block {
+    width: 100vw; }
+    main#home #card-block .card-url {
+      text-decoration: none;
+      color: black; }
+    main#home #card-block .card.abrt {
+      border: 5px solid red; }
+    main#home #card-block .card.fchd {
+      border: 5px solid green; }
+    main#home #card-block .card.andt {
+      border: 5px solid yellow; }
+    main#home #card-block.show-grid {
+      padding-top: 10px;
+      width: 100%;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 4fr);
+      border: 0; }
+      main#home #card-block.show-grid .card {
+        padding-top: 75%;
+        text-align: center; }
+        main#home #card-block.show-grid .card .hidden {
+          display: none; }
+        main#home #card-block.show-grid .card h2 {
+          text-transform: uppercase;
+          padding-bottom: 0.4rem;
+          padding-top: 0.4rem;
+          margin: 0;
+          font-weight: normal;
+          text-align: center;
+          background: rgba(204, 204, 204, 0.664);
+          font-size: 15px; }
+    main#home #card-block.show-list {
+      display: block; }
+      main#home #card-block.show-list .card {
+        background-color: #bbb;
+        margin: 30px 0; }
+        main#home #card-block.show-list .card h2, main#home #card-block.show-list .card h4 {
+          padding: 9px;
+          margin: 0;
+          background-color: rgba(187, 187, 187, 0.808); }
 
 main#form {
   background: #fff; }
   main#form .container {
-    padding: 16px; }
+    padding: 16px 40px; }
   main#form textarea {
     width: 100%;
     padding: 15px;
@@ -170,28 +174,80 @@ main#form {
   main#form .enviar:hover {
     opacity: 1; }
 
+main#chat .poste {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; }
+  main#chat .poste .poste-padding .poste-content .img-poste-obra {
+    background-color: #eee;
+    box-shadow: 0px 8px 17px 1px rgba(0, 0, 0, 0.2); }
+    main#chat .poste .poste-padding .poste-content .img-poste-obra .img-poste {
+      width: 100%;
+      height: 200px;
+      background-color: #eee; }
+  main#chat .poste .poste-padding .poste-content .desc-poste {
+    padding: 10px; }
+  main#chat .poste .poste-padding .poste-content .coment-poste {
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
+    main#chat .poste .poste-padding .poste-content .coment-poste .title-coment {
+      height: 50px;
+      background-color: #eee;
+      padding-top: 1px; }
+    main#chat .poste .poste-padding .poste-content .coment-poste .comentarios {
+      width: 100%;
+      float: left;
+      margin-top: 5px; }
+      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .img-coment-perfil {
+        float: left;
+        width: 20%; }
+        main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .img-coment-perfil .img-perfil {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%; }
+      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .texto-coment {
+        float: right;
+        width: 80%; }
+      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .campo-email {
+        width: 90%; }
+      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .campo-comentario {
+        width: 90%;
+        height: 100px; }
+      main#chat .poste .poste-padding .poste-content .coment-poste .comentarios .form-chat .enviar {
+        width: 150px;
+        height: 70px; }
+
 @media only screen and (min-width: 769px) and (max-width: 1170px) {
   main#home #card-block.show-grid {
     grid-template-columns: repeat(3, 3fr); } }
 
 @media only screen and (max-width: 768px) {
-  main#home #card-block.show-grid {
-    grid-template-columns: repeat(2, 2fr); }
-  main#home .bar {
-    display: block; }
-    main#home .bar .esquerda .aberta,
-    main#home .bar .esquerda .fechada,
-    main#home .bar .esquerda .andamento {
-      margin-bottom: 4px;
-      width: 100%; }
-    main#home .bar .direita {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
-      grid-gap: 0.4rem; }
-      main#home .bar .direita button {
-        margin: 0 auto;
-        display: inline-block;
+  main#home {
+    padding: 0 16px; }
+    main#home #card-block.show-grid {
+      grid-template-columns: repeat(2, 2fr); }
+    main#home .bar {
+      display: block; }
+      main#home .bar .esquerda .aberta,
+      main#home .bar .esquerda .fechada,
+      main#home .bar .esquerda .andamento {
+        margin-bottom: 4px;
         width: 100%; }
+      main#home .bar .direita {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 0.4rem; }
+        main#home .bar .direita button {
+          margin: 0 auto;
+          display: inline-block;
+          width: 100%; }
+  main#form .container {
+    padding: 16px; }
   main#form .img label {
     display: block;
     text-align: center; }
