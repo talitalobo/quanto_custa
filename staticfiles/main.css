@@ -83,7 +83,7 @@ main#home {
       border: 0px;
       width: 100%; }
   main#home #card-block {
-    width: 100%; }
+    width: 100vw; }
     main#home #card-block .card-url {
       text-decoration: none;
       color: black; }
@@ -112,7 +112,8 @@ main#home {
           margin: 0;
           font-weight: normal;
           text-align: center;
-          background: #ccc; }
+          background: rgba(204, 204, 204, 0.664);
+          font-size: 15px; }
     main#home #card-block.show-list {
       display: block; }
       main#home #card-block.show-list .card {
@@ -126,7 +127,7 @@ main#home {
 main#form {
   background: #fff; }
   main#form .container {
-    padding: 16px; }
+    padding: 16px 40px; }
   main#form textarea {
     width: 100%;
     padding: 15px;
@@ -226,23 +227,27 @@ main#chat .poste {
     grid-template-columns: repeat(3, 3fr); } }
 
 @media only screen and (max-width: 768px) {
-  main#home #card-block.show-grid {
-    grid-template-columns: repeat(2, 2fr); }
-  main#home .bar {
-    display: block; }
-    main#home .bar .esquerda .aberta,
-    main#home .bar .esquerda .fechada,
-    main#home .bar .esquerda .andamento {
-      margin-bottom: 4px;
-      width: 100%; }
-    main#home .bar .direita {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
-      grid-gap: 0.4rem; }
-      main#home .bar .direita button {
-        margin: 0 auto;
-        display: inline-block;
+  main#home {
+    padding: 0 16px; }
+    main#home #card-block.show-grid {
+      grid-template-columns: repeat(2, 2fr); }
+    main#home .bar {
+      display: block; }
+      main#home .bar .esquerda .aberta,
+      main#home .bar .esquerda .fechada,
+      main#home .bar .esquerda .andamento {
+        margin-bottom: 4px;
         width: 100%; }
+      main#home .bar .direita {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 0.4rem; }
+        main#home .bar .direita button {
+          margin: 0 auto;
+          display: inline-block;
+          width: 100%; }
+  main#form .container {
+    padding: 16px; }
   main#form .img label {
     display: block;
     text-align: center; }
@@ -255,10 +260,8 @@ main#chat .poste {
     padding: 0; } }
 
 @media only screen and (max-width: 500px) {
-  main#home {
-    padding: 0 16px; }
-    main#home #card-block.show-grid {
-      grid-template-columns: repeat(2, 2fr); }
+  main#home #card-block.show-grid {
+    grid-template-columns: repeat(2, 2fr); }
   header .menu-branding, header .menu-nav {
     display: flex;
     width: 100%;
