@@ -45,27 +45,27 @@
     </div>
 
     <div id="card-block" class="show-grid">
-      <div class="card-img" style="background-image: url(../img/outdoor1.jpeg);">
+      <div class="card-img abrt" style="background-image: url(../img/outdoor1.jpeg);">
         <a href="#" class="card-url">
-          <div class="card abrt">
+          <div class="card">
             <h2>Titulo</h2>
             <h4 class="hidden">Endereco</h4>
           </div>
         </a>
       </div>
 
-      <div class="card-img" style="background-image: url(../img/outdoor2.jpeg);">
+      <div class="card-img fchd" style="background-image: url(../img/outdoor2.jpeg);">
         <a href="#" class="card-url">
-          <div class="card fchd">
+          <div class="card">
             <h2>Titulo</h2>
             <h4 class="hidden">Endereco</h4>
           </div>
         </a>
       </div>
 
-      <div class="card-img" style="background-image: url(../img/outdoor3.jpg);">
+      <div class="card-img andt" style="background-image: url(../img/outdoor3.jpg);">
         <a href="#" class="card-url">
-          <div class="card andt">
+          <div class="card">
             <h2>Titulo</h2>
             <h4 class="hidden">Endereco</h4>
           </div>
@@ -73,9 +73,9 @@
       </div>
 
       {% for esclarecimento in esclarecimentos  %}
-      <div class="card-img" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
+      <div class="card-img andt" style="background-image: url({% if esclarecimento.get_foto_principal %}{{esclarecimento.get_foto_principal.foto.url}}{% endif %});">
         <a href="{% url 'esclarecimento:add_chat' id=esclarecimento.id %}" class="card-url">
-          <div class="card andt">
+          <div class="card">
             <h2>{{esclarecimento.titulo}}</h2>
             <h4 class="hidden">{{esclarecimento.descricao}}</h4>
           </div>

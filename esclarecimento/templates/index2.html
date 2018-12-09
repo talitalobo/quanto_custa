@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Esclarece Aqui</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <h1 class="menu-branding">
+        esclarece aqui
+      </h1>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="bar">
+      <div class="esquerda">
+        <button class="aberta">Abertas</button>
+        <button class="fechada">Fechadas</button>
+        <button class="andamento">Em andamento</button>
+      </div>
+      <div class="direita">
+        <button id="grid"><i class="fa fa-th-large"></i></button>
+        <button id="list"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="adiciona">
+      <button id="add">Solicitar esclarecimento</button>
+    </div>
+
+    <div id="card-block" class="show-grid">
+      <a href="#" class="card-url">
+        <div class="card abrt" style="background-image: url(../img/outdoor1.jpeg);">
+          <h2>Titulo</h2>
+          <h4 class="hidden">Endereco</h4>
+        </div>
+      </a>
+
+      <a href="#" class="card-url">
+        <div class="card fchd" style="background-image: url(../img/outdoor2.jpeg);">
+          <h2>Titulo</h2>
+          <h4 class="hidden">Endereco</h4>
+        </div>
+      </a>
+
+      <a href="#" class="card-url">
+        <div class="card andt" style="background-image: url(../img/outdoor3.jpg);">
+          <h2>Titulo</h2>
+          <h4 class="hidden">Endereco</h4>
+        </div>
+      </a>
+
+      <a href="#" class="card-url">
+        <div class="card andt" style="background-image: url(../img/outdoor4.jpeg);">
+          <h2>Titulo</h2>
+          <h4 class="hidden">Endereco</h4>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/button.js"></script>
+</body>
+
+</html>
+
+<!-- https://stackoverflow.com/questions/41542845/how-to-display-file-name-for-custom-styled-input-file-using-jquery -->
