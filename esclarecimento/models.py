@@ -33,13 +33,13 @@ class Esclarecimento(models.Model):
     def status_css(self):
 
         if self.status==None:
-            return "card abrt"
+            return "abrt"
         if self.status == self.ABERTO:
-            return "card abrt"
+            return "abrt"
         if self.status == self.PROCESSANDO:
-            return "card andt"
+            return "andt"
         if self.status == self.FINALIZADO:
-            return "card fchd"
+            return "fchd"
 
 
 class Chat(models.Model):
